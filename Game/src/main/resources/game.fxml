@@ -1,0 +1,271 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane fx:id="anchorPane" minHeight="300.0" minWidth="300.0" prefHeight="470.0" prefWidth="700.0" xmlns="http://javafx.com/javafx/11.0.2" xmlns:fx="http://javafx.com/fxml/1" fx:controller="GameView2">
+   <children>
+      <Label fx:id="gamers" layoutX="14.0" layoutY="5.0" text="Choose gamers" AnchorPane.leftAnchor="45.0" AnchorPane.topAnchor="5.0" />
+      <Separator layoutX="8.0" layoutY="169.0" prefHeight="26.0" prefWidth="270.0" />
+      <Separator layoutX="249.0" layoutY="8.0" orientation="VERTICAL" prefHeight="313.0" prefWidth="60.0" />
+      <ChoiceBox fx:id="choiceBoxGamer1" layoutX="13.0" layoutY="61.0" maxHeight="105.0" onMousePressed="#setGamer1Type" prefHeight="26.0" prefWidth="170.0" AnchorPane.leftAnchor="5.0" AnchorPane.topAnchor="60.0" />
+      <ChoiceBox fx:id="choiceBoxGamer2" layoutX="13.0" layoutY="127.0" onMousePressed="#setGamer2Type" prefHeight="26.0" prefWidth="170.0" AnchorPane.leftAnchor="5.0" AnchorPane.topAnchor="126.0">
+         <cursor>
+            <Cursor fx:constant="TEXT" />
+         </cursor>
+         <effect>
+            <Glow />
+         </effect></ChoiceBox>
+      <TextField fx:id="textFieldGamer1" layoutX="13.0" layoutY="43.0" prefHeight="26.0" prefWidth="170.0" promptText="Gamer 1" text="Gamer 1" AnchorPane.leftAnchor="5.0" AnchorPane.topAnchor="35.0" />
+      <TextField fx:id="textFieldGamer2" layoutX="14.0" layoutY="101.0" prefHeight="26.0" prefWidth="170.0" promptText="Gamer 2" text="Gamer 2" AnchorPane.leftAnchor="5.0" AnchorPane.topAnchor="100.0" />
+      <Label layoutX="130.0" layoutY="5.0" text="Choose shape" AnchorPane.leftAnchor="185.0" AnchorPane.topAnchor="5.0" />
+      <CheckBox layoutX="173.0" layoutY="49.0" mnemonicParsing="false" onAction="#chooseMark1X" text="X" AnchorPane.leftAnchor="210.0" AnchorPane.topAnchor="40.0" fx:id="xShape1" />
+      <CheckBox fx:id="oShape1" layoutX="172.0" layoutY="74.0" mnemonicParsing="false" onAction="#chooseMark1O" text="O" AnchorPane.leftAnchor="210.0" AnchorPane.topAnchor="65.0" />
+      <CheckBox layoutX="149.0" layoutY="105.0" mnemonicParsing="false" text="X" visible="false" AnchorPane.leftAnchor="140.0" AnchorPane.topAnchor="102.0" fx:id="xGamer2" />
+      <CheckBox fx:id="oGamer2" layoutX="148.0" layoutY="131.0" mnemonicParsing="false" text="O" visible="false" AnchorPane.leftAnchor="140.0" AnchorPane.topAnchor="130.0" />
+      <Label layoutX="13.0" layoutY="182.0" text="Board size" AnchorPane.leftAnchor="15.0" AnchorPane.topAnchor="180.0" />
+      <Separator layoutX="77.0" layoutY="179.0" orientation="VERTICAL" prefHeight="142.0" prefWidth="60.0" />
+      <ChoiceBox fx:id="boardSizeChoiceBox" layoutX="20.0" layoutY="213.0" onMousePressed="#setBoardSize" prefHeight="80.0" prefWidth="80.0" AnchorPane.leftAnchor="5.0" AnchorPane.topAnchor="210.0" />
+      <Label layoutX="137.0" layoutY="182.0" text="Robot 1 level" AnchorPane.leftAnchor="100.0" AnchorPane.topAnchor="180.0" />
+      <CheckBox fx:id="levelEasy1" disable="true" layoutX="140.0" layoutY="218.0" mnemonicParsing="false" onAction="#setRobot1Level" text="Easy" AnchorPane.leftAnchor="105.0" AnchorPane.topAnchor="210.0" />
+      <CheckBox fx:id="levelMedium1" disable="true" layoutX="145.0" layoutY="246.0" mnemonicParsing="false" onAction="#setRobot1Level" text="Medium" AnchorPane.leftAnchor="105.0" AnchorPane.topAnchor="240.0" />
+      <CheckBox fx:id="levelHard1" disable="true" layoutX="139.0" layoutY="274.0" mnemonicParsing="false" onAction="#setRobot1Level" text="Hard" AnchorPane.leftAnchor="105.0" AnchorPane.topAnchor="270.0" />
+      <Button fx:id="start" layoutX="146.0" layoutY="336.0" minWidth="100.0" mnemonicParsing="false" onAction="#startGame" prefHeight="40.0" prefWidth="268.0" text="Start" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="320.0" />
+      <Button fx:id="restart" layoutX="143.0" layoutY="366.0" minWidth="0.0" mnemonicParsing="false" onAction="#resetButton" prefHeight="40.0" prefWidth="268.0" text="Restart" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="360.0" />
+      <Button fx:id="nextMove" layoutX="424.0" layoutY="360.0" minWidth="100.0" mnemonicParsing="false" onAction="#nextMoveFinishGame" prefHeight="40.0" text="Next move / finish game" AnchorPane.bottomAnchor="5.0" AnchorPane.rightAnchor="25.0" />
+      <Separator layoutX="8.0" layoutY="311.0" prefHeight="26.0" prefWidth="270.0" />
+      <Separator layoutX="-7.0" layoutY="6.0" orientation="VERTICAL" prefHeight="409.0" prefWidth="30.0" />
+      <Separator layoutX="8.0" layoutY="-5.0" prefHeight="26.0" prefWidth="270.0" />
+      <Label layoutX="282.0" layoutY="407.0" text="Gamer 1 score" AnchorPane.leftAnchor="280.0" AnchorPane.topAnchor="400.0" />
+      <Label fx:id="scoreGamer1" layoutX="390.0" layoutY="415.0" prefWidth="15.0" text="0" AnchorPane.leftAnchor="360.0" AnchorPane.topAnchor="400.0" />
+      <Label layoutX="292.0" layoutY="435.0" text="Gamer 2 score" AnchorPane.leftAnchor="280.0" AnchorPane.topAnchor="430.0" />
+      <Label fx:id="scoreGamer2" layoutX="387.0" layoutY="446.0" text="0" AnchorPane.leftAnchor="360.0" AnchorPane.topAnchor="430.0" />
+      <Label layoutX="8.0" layoutY="372.0" prefHeight="18.0" prefWidth="82.0" text="Round number" AnchorPane.leftAnchor="390.0" AnchorPane.topAnchor="400.0" />
+      <Label fx:id="roundNumber" layoutX="93.0" layoutY="373.0" text="0" AnchorPane.leftAnchor="475.0" AnchorPane.topAnchor="400.0" />
+      <Label layoutX="11.0" layoutY="391.0" text="Move number" AnchorPane.leftAnchor="390.0" AnchorPane.topAnchor="430.0" />
+      <Label fx:id="moveNumber" layoutX="93.0" layoutY="391.0" text="0" AnchorPane.leftAnchor="475.0" AnchorPane.topAnchor="430.0" />
+      <Separator layoutX="4.0" layoutY="406.0" prefHeight="18.0" prefWidth="131.0" />
+      <Separator layoutX="7.0" layoutY="92.0" prefHeight="26.0" prefWidth="270.0" />
+      <Button fx:id="_01_5" layoutX="304.0" layoutY="25.0" mnemonicParsing="false" onAction="#insertDataToBoard" prefHeight="70.0" prefWidth="70.0" text="_5" visible="false" AnchorPane.rightAnchor="299.0" AnchorPane.topAnchor="15.0">
+         <font>
+            <Font size="24.0" />
+         </font></Button>
+      <Button fx:id="_02_5" layoutX="375.0" layoutY="25.0" mnemonicParsing="false" onAction="#insertDataToBoard" prefHeight="70.0" prefWidth="70.0" text="_5" visible="false" AnchorPane.rightAnchor="228.0" AnchorPane.topAnchor="15.0">
+         <font>
+            <Font size="24.0" />
+         </font></Button>
+      <Button fx:id="_03_5" layoutX="456.0" layoutY="25.0" mnemonicParsing="false" onAction="#insertDataToBoard" prefHeight="70.0" prefWidth="70.0" text="_5" visible="false" AnchorPane.rightAnchor="157.0" AnchorPane.topAnchor="15.0">
+         <font>
+            <Font size="24.0" />
+         </font></Button>
+      <Button fx:id="_04_5" layoutX="530.0" layoutY="25.0" mnemonicParsing="false" onAction="#insertDataToBoard" prefHeight="70.0" prefWidth="70.0" text="_5" visible="false" AnchorPane.rightAnchor="86.0" AnchorPane.topAnchor="15.0">
+         <font>
+            <Font size="24.0" />
+         </font></Button>
+      <Button fx:id="_05_5" layoutX="590.0" layoutY="58.0" mnemonicParsing="false" onAction="#insertDataToBoard" prefHeight="70.0" prefWidth="70.0" text="_5" visible="false" AnchorPane.rightAnchor="15.0" AnchorPane.topAnchor="15.0">
+         <font>
+            <Font size="24.0" />
+         </font></Button>
+      <Button fx:id="_06_5" layoutX="304.0" layoutY="95.0" mnemonicParsing="false" onAction="#insertDataToBoard" prefHeight="70.0" prefWidth="70.0" text="_5" visible="false" AnchorPane.rightAnchor="299.0" AnchorPane.topAnchor="85.0">
+         <font>
+            <Font size="24.0" />
+         </font></Button>
+      <Button fx:id="_07_5" layoutX="375.0" layoutY="95.0" mnemonicParsing="false" onAction="#insertDataToBoard" prefHeight="70.0" prefWidth="70.0" text="_5" visible="false" AnchorPane.rightAnchor="228.0" AnchorPane.topAnchor="85.0">
+         <font>
+            <Font size="24.0" />
+         </font></Button>
+      <Button fx:id="_08_5" layoutX="456.0" layoutY="95.0" mnemonicParsing="false" onAction="#insertDataToBoard" prefHeight="70.0" prefWidth="70.0" text="_5" visible="false" AnchorPane.rightAnchor="157.0" AnchorPane.topAnchor="85.0">
+         <font>
+            <Font size="24.0" />
+         </font></Button>
+      <Button fx:id="_09_5" layoutX="530.0" layoutY="94.0" mnemonicParsing="false" onAction="#insertDataToBoard" prefHeight="70.0" prefWidth="70.0" text="_5" visible="false" AnchorPane.rightAnchor="86.0" AnchorPane.topAnchor="85.0">
+         <font>
+            <Font size="24.0" />
+         </font></Button>
+      <Button fx:id="_10_5" layoutX="530.0" layoutY="136.0" mnemonicParsing="false" onAction="#insertDataToBoard" prefHeight="70.0" prefWidth="70.0" text="_5" visible="false" AnchorPane.rightAnchor="15.0" AnchorPane.topAnchor="85.0">
+         <font>
+            <Font size="24.0" />
+         </font></Button>
+      <Button fx:id="_11_5" layoutX="304.0" layoutY="163.0" mnemonicParsing="false" onAction="#insertDataToBoard" prefHeight="70.0" prefWidth="70.0" text="_5" visible="false" AnchorPane.rightAnchor="299.0" AnchorPane.topAnchor="155.0">
+         <font>
+            <Font size="24.0" />
+         </font></Button>
+      <Button fx:id="_12_5" layoutX="375.0" layoutY="163.0" mnemonicParsing="false" onAction="#insertDataToBoard" prefHeight="70.0" prefWidth="70.0" text="_5" visible="false" AnchorPane.rightAnchor="228.0" AnchorPane.topAnchor="155.0">
+         <font>
+            <Font size="24.0" />
+         </font></Button>
+      <Button fx:id="_13_5" layoutX="456.0" layoutY="165.0" mnemonicParsing="false" onAction="#insertDataToBoard" prefHeight="70.0" prefWidth="70.0" text="_5" visible="false" AnchorPane.rightAnchor="157.0" AnchorPane.topAnchor="155.0">
+         <font>
+            <Font size="24.0" />
+         </font></Button>
+      <Button fx:id="_14_5" layoutX="530.0" layoutY="165.0" mnemonicParsing="false" onAction="#insertDataToBoard" prefHeight="70.0" prefWidth="70.0" text="_5" visible="false" AnchorPane.rightAnchor="86.0" AnchorPane.topAnchor="155.0">
+         <font>
+            <Font size="24.0" />
+         </font></Button>
+      <Button fx:id="_15_5" layoutX="530.0" layoutY="170.0" mnemonicParsing="false" onAction="#insertDataToBoard" prefHeight="70.0" prefWidth="70.0" text="_5" visible="false" AnchorPane.rightAnchor="15.0" AnchorPane.topAnchor="155.0">
+         <font>
+            <Font size="24.0" />
+         </font></Button>
+      <Button fx:id="_16_5" layoutX="304.0" layoutY="235.0" mnemonicParsing="false" onAction="#insertDataToBoard" prefHeight="70.0" prefWidth="70.0" text="_5" visible="false" AnchorPane.rightAnchor="299.0" AnchorPane.topAnchor="225.0">
+         <font>
+            <Font size="24.0" />
+         </font></Button>
+      <Button fx:id="_17_5" layoutX="375.0" layoutY="232.0" mnemonicParsing="false" onAction="#insertDataToBoard" prefHeight="70.0" prefWidth="70.0" text="_5" visible="false" AnchorPane.rightAnchor="228.0" AnchorPane.topAnchor="225.0">
+         <font>
+            <Font size="24.0" />
+         </font></Button>
+      <Button fx:id="_18_5" layoutX="456.0" layoutY="235.0" mnemonicParsing="false" onAction="#insertDataToBoard" prefHeight="70.0" prefWidth="70.0" text="_5" visible="false" AnchorPane.rightAnchor="157.0" AnchorPane.topAnchor="225.0">
+         <font>
+            <Font size="24.0" />
+         </font></Button>
+      <Button fx:id="_19_5" layoutX="530.0" layoutY="238.0" mnemonicParsing="false" onAction="#insertDataToBoard" prefHeight="70.0" prefWidth="70.0" text="_5" visible="false" AnchorPane.rightAnchor="86.0" AnchorPane.topAnchor="225.0">
+         <font>
+            <Font size="24.0" />
+         </font></Button>
+      <Button fx:id="_20_5" layoutX="530.0" layoutY="208.0" mnemonicParsing="false" onAction="#insertDataToBoard" prefHeight="70.0" prefWidth="70.0" text="_5" visible="false" AnchorPane.rightAnchor="15.0" AnchorPane.topAnchor="225.0">
+         <font>
+            <Font size="24.0" />
+         </font></Button>
+      <Button fx:id="_21_5" layoutX="304.0" layoutY="305.0" mnemonicParsing="false" onAction="#insertDataToBoard" prefHeight="70.0" prefWidth="70.0" text="_5" visible="false" AnchorPane.rightAnchor="299.0" AnchorPane.topAnchor="295.0">
+         <font>
+            <Font size="24.0" />
+         </font></Button>
+      <Button fx:id="_22_5" layoutX="375.0" layoutY="305.0" mnemonicParsing="false" onAction="#insertDataToBoard" prefHeight="70.0" prefWidth="70.0" text="_5" visible="false" AnchorPane.rightAnchor="228.0" AnchorPane.topAnchor="295.0">
+         <font>
+            <Font size="24.0" />
+         </font></Button>
+      <Button fx:id="_23_5" layoutX="456.0" layoutY="305.0" mnemonicParsing="false" onAction="#insertDataToBoard" prefHeight="70.0" prefWidth="70.0" text="_5" visible="false" AnchorPane.rightAnchor="157.0" AnchorPane.topAnchor="295.0">
+         <font>
+            <Font size="24.0" />
+         </font></Button>
+      <Button fx:id="_24_5" layoutX="530.0" layoutY="305.0" mnemonicParsing="false" onAction="#insertDataToBoard" prefHeight="70.0" prefWidth="70.0" text="_5" visible="false" AnchorPane.rightAnchor="86.0" AnchorPane.topAnchor="295.0">
+         <font>
+            <Font size="24.0" />
+         </font></Button>
+      <Button fx:id="_25_5" layoutX="604.0" layoutY="289.0" mnemonicParsing="false" onAction="#insertDataToBoard" prefHeight="70.0" prefWidth="70.0" text="_5" visible="false" AnchorPane.rightAnchor="15.0" AnchorPane.topAnchor="295.0">
+         <font>
+            <Font size="24.0" />
+         </font></Button>
+      <Button fx:id="_04_4" layoutX="563.0" layoutY="34.0" mnemonicParsing="false" onAction="#insertDataToBoard" prefHeight="90.0" prefWidth="90.0" text="_4" visible="false" AnchorPane.rightAnchor="15.0" AnchorPane.topAnchor="15.0">
+         <font>
+            <Font size="24.0" />
+         </font></Button>
+      <Button fx:id="_03_4" layoutX="463.0" layoutY="33.0" mnemonicParsing="false" onAction="#insertDataToBoard" prefHeight="90.0" prefWidth="90.0" text="_4" visible="false" AnchorPane.rightAnchor="105.0" AnchorPane.topAnchor="15.0">
+         <font>
+            <Font size="24.0" />
+         </font></Button>
+      <Button fx:id="_02_4" layoutX="362.0" layoutY="32.0" mnemonicParsing="false" onAction="#insertDataToBoard" prefHeight="90.0" prefWidth="90.0" text="_4" visible="false" AnchorPane.rightAnchor="195.0" AnchorPane.topAnchor="15.0">
+         <font>
+            <Font size="24.0" />
+         </font></Button>
+      <Button fx:id="_01_4" layoutX="262.0" layoutY="32.0" mnemonicParsing="false" onAction="#insertDataToBoard" prefHeight="90.0" prefWidth="90.0" text="_4" visible="false" AnchorPane.rightAnchor="285.0" AnchorPane.topAnchor="15.0">
+         <font>
+            <Font size="24.0" />
+         </font></Button>
+      <Button fx:id="_08_4" layoutX="584.0" layoutY="117.0" mnemonicParsing="false" onAction="#insertDataToBoard" prefHeight="90.0" prefWidth="90.0" text="_4" visible="false" AnchorPane.rightAnchor="15.0" AnchorPane.topAnchor="105.0">
+         <font>
+            <Font size="24.0" />
+         </font></Button>
+      <Button fx:id="_12_4" layoutX="584.0" layoutY="205.0" mnemonicParsing="false" onAction="#insertDataToBoard" prefHeight="90.0" prefWidth="90.0" text="_4" visible="false" AnchorPane.rightAnchor="15.0" AnchorPane.topAnchor="195.0">
+         <font>
+            <Font size="24.0" />
+         </font></Button>
+      <Button fx:id="_16_4" layoutX="584.0" layoutY="292.0" mnemonicParsing="false" onAction="#insertDataToBoard" prefHeight="90.0" prefWidth="90.0" text="_4" visible="false" AnchorPane.rightAnchor="15.0" AnchorPane.topAnchor="285.0">
+         <font>
+            <Font size="24.0" />
+         </font></Button>
+      <Button fx:id="_07_4" layoutX="508.0" layoutY="152.0" mnemonicParsing="false" onAction="#insertDataToBoard" prefHeight="90.0" prefWidth="90.0" text="_4" visible="false" AnchorPane.rightAnchor="105.0" AnchorPane.topAnchor="105.0">
+         <font>
+            <Font size="24.0" />
+         </font></Button>
+      <Button fx:id="_11_4" layoutX="507.0" layoutY="238.0" mnemonicParsing="false" onAction="#insertDataToBoard" prefHeight="90.0" prefWidth="90.0" text="_4" visible="false" AnchorPane.rightAnchor="105.0" AnchorPane.topAnchor="195.0">
+         <font>
+            <Font size="24.0" />
+         </font></Button>
+      <Button fx:id="_15_4" layoutX="508.0" layoutY="325.0" mnemonicParsing="false" onAction="#insertDataToBoard" prefHeight="90.0" prefWidth="90.0" text="_4" visible="false" AnchorPane.rightAnchor="105.0" AnchorPane.topAnchor="285.0">
+         <font>
+            <Font size="24.0" />
+         </font></Button>
+      <Button fx:id="_06_4" layoutX="424.0" layoutY="153.0" mnemonicParsing="false" onAction="#insertDataToBoard" prefHeight="90.0" prefWidth="90.0" text="_4" visible="false" AnchorPane.rightAnchor="195.0" AnchorPane.topAnchor="105.0">
+         <font>
+            <Font size="24.0" />
+         </font></Button>
+      <Button fx:id="_10_4" layoutX="424.0" layoutY="238.0" mnemonicParsing="false" onAction="#insertDataToBoard" prefHeight="90.0" prefWidth="90.0" text="_4" visible="false" AnchorPane.rightAnchor="195.0" AnchorPane.topAnchor="195.0">
+         <font>
+            <Font size="24.0" />
+         </font></Button>
+      <Button fx:id="_14_4" layoutX="424.0" layoutY="326.0" mnemonicParsing="false" onAction="#insertDataToBoard" prefHeight="90.0" prefWidth="90.0" text="_4" visible="false" AnchorPane.rightAnchor="195.0" AnchorPane.topAnchor="285.0">
+         <font>
+            <Font size="24.0" />
+         </font></Button>
+      <Button fx:id="_05_4" layoutX="334.0" layoutY="153.0" mnemonicParsing="false" onAction="#insertDataToBoard" prefHeight="90.0" prefWidth="90.0" text="_4" visible="false" AnchorPane.rightAnchor="285.0" AnchorPane.topAnchor="105.0">
+         <font>
+            <Font size="24.0" />
+         </font></Button>
+      <Button fx:id="_09_4" layoutX="334.0" layoutY="238.0" mnemonicParsing="false" onAction="#insertDataToBoard" prefHeight="90.0" prefWidth="90.0" text="_4" visible="false" AnchorPane.rightAnchor="285.0" AnchorPane.topAnchor="195.0">
+         <font>
+            <Font size="24.0" />
+         </font></Button>
+      <Button fx:id="_13_4" layoutX="334.0" layoutY="325.0" mnemonicParsing="false" onAction="#insertDataToBoard" prefHeight="90.0" prefWidth="90.0" text="_4" visible="false" AnchorPane.rightAnchor="285.0" AnchorPane.topAnchor="285.0">
+         <font>
+            <Font size="24.0" />
+         </font></Button>
+      <Button fx:id="_01_3" layoutX="281.0" layoutY="24.0" mnemonicParsing="false" onAction="#insertDataToBoard" prefHeight="120.0" prefWidth="120.0" text="_3" visible="false" AnchorPane.rightAnchor="265.0" AnchorPane.topAnchor="15.0">
+         <font>
+            <Font size="24.0" />
+         </font></Button>
+      <Button fx:id="_04_3" layoutX="281.0" layoutY="148.0" mnemonicParsing="false" onAction="#insertDataToBoard" prefHeight="120.0" prefWidth="120.0" text="_3" visible="false" AnchorPane.rightAnchor="265.0" AnchorPane.topAnchor="135.0">
+         <font>
+            <Font size="24.0" />
+         </font></Button>
+      <Button fx:id="_07_3" layoutX="281.0" layoutY="270.0" mnemonicParsing="false" onAction="#insertDataToBoard" prefHeight="120.0" prefWidth="120.0" text="_3" visible="false" AnchorPane.rightAnchor="265.0" AnchorPane.topAnchor="255.0">
+         <font>
+            <Font size="24.0" />
+         </font></Button>
+      <Button fx:id="_02_3" layoutX="444.0" layoutY="71.0" mnemonicParsing="false" onAction="#insertDataToBoard" prefHeight="120.0" prefWidth="120.0" text="_3" visible="false" AnchorPane.rightAnchor="145.0" AnchorPane.topAnchor="15.0">
+         <font>
+            <Font size="24.0" />
+         </font></Button>
+      <Button fx:id="_05_3" layoutX="444.0" layoutY="196.0" mnemonicParsing="false" onAction="#insertDataToBoard" prefHeight="120.0" prefWidth="120.0" text="_3" visible="false" AnchorPane.rightAnchor="145.0" AnchorPane.topAnchor="135.0">
+         <font>
+            <Font size="24.0" />
+         </font></Button>
+      <Button fx:id="_08_3" layoutX="444.0" layoutY="318.0" mnemonicParsing="false" onAction="#insertDataToBoard" prefHeight="120.0" prefWidth="120.0" text="_3" visible="false" AnchorPane.rightAnchor="145.0" AnchorPane.topAnchor="255.0">
+         <font>
+            <Font size="24.0" />
+         </font></Button>
+      <Button fx:id="_03_3" layoutX="569.0" layoutY="72.0" mnemonicParsing="false" onAction="#insertDataToBoard" prefHeight="120.0" prefWidth="120.0" text="_3" visible="false" AnchorPane.rightAnchor="25.0" AnchorPane.topAnchor="15.0">
+         <font>
+            <Font size="24.0" />
+         </font></Button>
+      <Button fx:id="_06_3" layoutX="569.0" layoutY="196.0" mnemonicParsing="false" onAction="#insertDataToBoard" prefHeight="120.0" prefWidth="120.0" text="_3" visible="false" AnchorPane.rightAnchor="25.0" AnchorPane.topAnchor="135.0">
+         <font>
+            <Font size="24.0" />
+         </font></Button>
+      <Button fx:id="_09_3" layoutX="569.0" layoutY="318.0" mnemonicParsing="false" onAction="#insertDataToBoard" prefHeight="120.0" prefWidth="120.0" text="_3" visible="false" AnchorPane.rightAnchor="25.0" AnchorPane.topAnchor="255.0">
+         <font>
+            <Font size="24.0" />
+         </font></Button>
+      <Button fx:id="newGame" layoutX="14.0" layoutY="412.0" minWidth="0.0" mnemonicParsing="false" onAction="#setNewGame" prefHeight="40.0" prefWidth="268.0" text="New game" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="401.0" />
+      <Label layoutX="187.0" layoutY="190.0" text="Robot 2 level" AnchorPane.leftAnchor="185.0" />
+      <Separator layoutX="176.0" layoutY="181.0" orientation="VERTICAL" prefHeight="142.0" prefWidth="28.0" />
+      <CheckBox fx:id="levelEasy2" disable="true" layoutX="194.0" layoutY="220.0" mnemonicParsing="false" onAction="#setRobot2Level" text="Easy" AnchorPane.leftAnchor="190.0" AnchorPane.topAnchor="210.0" />
+      <CheckBox fx:id="levelMedium2" disable="true" layoutX="194.0" layoutY="252.0" mnemonicParsing="false" onAction="#setRobot2Level" text="Medium" AnchorPane.leftAnchor="190.0" AnchorPane.topAnchor="240.0" />
+      <CheckBox fx:id="levelHard2" disable="true" layoutX="194.0" layoutY="280.0" mnemonicParsing="false" onAction="#setRobot2Level" text="Hard" AnchorPane.leftAnchor="190.0" AnchorPane.topAnchor="270.0" />
+      <CheckBox layoutX="215.0" layoutY="114.0" mnemonicParsing="false" onAction="#chooseMark2X" text="X" AnchorPane.leftAnchor="210.0" AnchorPane.topAnchor="105.0" fx:id="xShape2" />
+      <CheckBox fx:id="oShape2" layoutX="216.0" layoutY="149.0" mnemonicParsing="false" onAction="#chooseMark2O" text="O" AnchorPane.leftAnchor="210.0" AnchorPane.topAnchor="130.0" />
+      <Label fx:id="infoLabel" layoutX="291.0" layoutY="400.0" prefHeight="18.0" prefWidth="150.0" AnchorPane.topAnchor="380.0" />
+      <Label fx:id="winnerLabel" layoutX="460.0" layoutY="202.0">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Label>
+   </children>
+   <padding>
+      <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+   </padding>
+</AnchorPane>
