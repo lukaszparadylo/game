@@ -259,7 +259,7 @@
       <CheckBox layoutX="215.0" layoutY="114.0" mnemonicParsing="false" onAction="#chooseMark2X" text="X" AnchorPane.leftAnchor="210.0" AnchorPane.topAnchor="105.0" fx:id="xShape2" />
       <CheckBox fx:id="oShape2" layoutX="216.0" layoutY="149.0" mnemonicParsing="false" onAction="#chooseMark2O" text="O" AnchorPane.leftAnchor="210.0" AnchorPane.topAnchor="130.0" />
       <Label fx:id="infoLabel" layoutX="291.0" layoutY="400.0" prefHeight="18.0" prefWidth="150.0" AnchorPane.topAnchor="380.0" />
-      <Label fx:id="winnerLabel" layoutX="460.0" layoutY="202.0">
+      <Label fx:id="winnerLabel" layoutX="460.0" layoutY="202.0" textFill="#17f080" AnchorPane.leftAnchor="350.0">
          <font>
             <Font size="20.0" />
          </font>

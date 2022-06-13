@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="pl.lukaszparadylo.gamers.Robot2Test" tests="2" skipped="0" failures="0" errors="0" timestamp="2022-01-13T16:50:44" hostname="LAPTOP-K0G3GO4J" time="0.01">
+  <properties/>
+  <testcase name="makeMove()" classname="pl.lukaszparadylo.gamers.Robot2Test" time="0.008"/>
+  <testcase name="robotLevelTest()" classname="pl.lukaszparadylo.gamers.Robot2Test" time="0.001"/>
+  <system-out><![CDATA[|O|_|O|
+|X|X|_|
+|_|X|_|
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

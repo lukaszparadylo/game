@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="pl.lukaszparadylo.board.BoardTest" tests="6" skipped="0" failures="0" errors="0" timestamp="2022-01-13T16:50:44" hostname="LAPTOP-K0G3GO4J" time="0.043">
+  <properties/>
+  <testcase name="getMoveNumber()" classname="pl.lukaszparadylo.board.BoardTest" time="0.029"/>
+  <testcase name="showBoard()" classname="pl.lukaszparadylo.board.BoardTest" time="0.006"/>
+  <testcase name="getBoardSize()" classname="pl.lukaszparadylo.board.BoardTest" time="0.001"/>
+  <testcase name="incrementMoveNumber()" classname="pl.lukaszparadylo.board.BoardTest" time="0.0"/>
+  <testcase name="setFields()" classname="pl.lukaszparadylo.board.BoardTest" time="0.001"/>
+  <testcase name="getFields()" classname="pl.lukaszparadylo.board.BoardTest" time="0.001"/>
+  <system-out><![CDATA[|_|
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

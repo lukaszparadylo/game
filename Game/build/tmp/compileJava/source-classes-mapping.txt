@@ -1,0 +1,24 @@
+GameView.java
+ GameView
+pl/lukaszparadylo/moves/FirstMoves.java
+ pl.lukaszparadylo.moves.FirstMoves
+pl/lukaszparadylo/moves/TheBestMoveFinder.java
+ pl.lukaszparadylo.moves.TheBestMoveFinder
+pl/lukaszparadylo/board/Board.java
+ pl.lukaszparadylo.board.Board
+pl/lukaszparadylo/gamers/Robot2.java
+ pl.lukaszparadylo.gamers.Robot2
+pl/lukaszparadylo/moves/RandomMove.java
+ pl.lukaszparadylo.moves.RandomMove
+pl/lukaszparadylo/judge/Judge2.java
+ pl.lukaszparadylo.judge.Judge2
+pl/lukaszparadylo/gamers/Gamer.java
+ pl.lukaszparadylo.gamers.Gamer
+Game.java
+ Game
+GameView2.java
+ GameView2
+pl/lukaszparadylo/exceptions/IllegalBoardSize.java
+ pl.lukaszparadylo.exceptions.IllegalBoardSize
+pl/lukaszparadylo/scanner/Scanner.java
+ pl.lukaszparadylo.scanner.Scanner

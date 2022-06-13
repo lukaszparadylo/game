@@ -1,0 +1,10 @@
+pl/lukaszparadylo/gamers/GamersTest.java
+ pl.lukaszparadylo.gamers.GamersTest
+GameTestSuit.java
+ GameTestSuit
+pl/lukaszparadylo/gamers/Robot2Test.java
+ pl.lukaszparadylo.gamers.Robot2Test
+pl/lukaszparadylo/judge/Judge2Test.java
+ pl.lukaszparadylo.judge.Judge2Test
+pl/lukaszparadylo/board/BoardTest.java
+ pl.lukaszparadylo.board.BoardTest
