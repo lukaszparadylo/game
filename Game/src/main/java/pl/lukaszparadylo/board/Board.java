@@ -57,5 +57,8 @@ public class Board {
     public Integer getBoardSize(){
         return fields.length;
     }
+    public void resetMoveNumber(){
+        this.moveNumber=0;
+    }
 
 }

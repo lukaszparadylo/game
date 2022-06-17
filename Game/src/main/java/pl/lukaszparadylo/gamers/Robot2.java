@@ -9,7 +9,7 @@ import pl.lukaszparadylo.moves.TheBestMoveFinder;
 
 import java.util.Random;
 @Getter
-public class Robot2 extends Gamer {
+public class Robot2 extends Gamer implements Player{
     private Integer robotLevel;
     private Boolean nextMove;
 
@@ -20,6 +20,7 @@ public class Robot2 extends Gamer {
         else this.robotLevel=robotLevel;
         this.nextMove = false;
     }
+
     public Boolean makeMove(Board board){
         TheBestMoveFinder theBestMoveFinder = new TheBestMoveFinder(board);
         Integer[] theBestMove;
@@ -60,7 +61,6 @@ public class Robot2 extends Gamer {
         return nextMove;
     }
 
-    @Override
     public void setNextMove(Boolean nextMove) {
         this.nextMove = nextMove;
     }

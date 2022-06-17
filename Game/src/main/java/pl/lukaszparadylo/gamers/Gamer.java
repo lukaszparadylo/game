@@ -4,7 +4,7 @@ import lombok.Getter;
 import pl.lukaszparadylo.board.Board;
 
 @Getter
-public class Gamer{
+public class Gamer {
     private String name;
     private Integer score;
     private Character chosenMark;
@@ -26,10 +26,15 @@ public class Gamer{
     public void addPoints(Integer score) {
         this.score += score;
     }
+
     public Boolean getNextMove() {
         return nextMove;
     }
     public void setNextMove(Boolean nextMove) {
         this.nextMove = nextMove;
+    }
+
+    public Boolean makeMove(Board board) {
+        return null;
     }
 }

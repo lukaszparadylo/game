@@ -1,3 +1,5 @@
+package pl.lukaszparadylo.trash;
+
 import com.sun.javafx.event.EventHandlerManager;
 import com.sun.javafx.event.EventUtil;
 import javafx.collections.FXCollections;
